@@ -1,0 +1,27 @@
+package concesionario;
+
+import java.util.Scanner;
+
+import refuerzo.Persona;
+
+public class Concesionario {
+
+	public static void main(String[] args) {
+		
+		Scanner teclado= new Scanner(System.in);
+		System.out.println("Introduce marca: " );
+		String marca = teclado.nextLine();
+		System.out.println("Introduce modelo: " );
+		String modelo = teclado.nextLine();
+		System.out.println("Introduce año de fabricación: " );
+		int anio = teclado.nextInt();
+		System.out.println("Introduce cantidad de puertas: " );
+		int cantidadPuertas = teclado.nextInt();
+		Coche coche1 = new Coche(marca,modelo,anio,cantidadPuertas);
+		System.out.println("la informacion del vehiculo es " + coche1);
+		
+		
+	}
+
+	
+}

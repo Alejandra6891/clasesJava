@@ -1,0 +1,70 @@
+package concesionario;
+
+import java.util.Scanner;
+
+import refuerzo.Persona;
+
+public class Concesionario {
+
+	static Scanner teclado= new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+	
+//		System.out.println("Introduce marca: " );
+//		String marca = teclado.nextLine();
+//		System.out.println("Introduce modelo: " );
+//		String modelo = teclado.nextLine();
+//		System.out.println("Introduce año de fabricación: " );
+//		int anio = teclado.nextInt();
+//		System.out.println("Introduce cantidad de puertas: " );
+//		int cantidadPuertas = teclado.nextInt();
+		
+		//Coche coche1 = new Coche(marca,modelo,anio,cantidadPuertas);
+		//System.out.println("la informacion del vehiculo es " + coche1);
+		Coche coche2 = new Coche("chevrolet", "spark", 2010, 5);
+		System.out.println("la informacion del vehiculo es " + coche2.toString());
+		Coche coche1 = crearCoche();
+		System.out.println("La informacion del vehiculo es "+ coche1);
+		
+		Moto moto3 = crearMoto();
+		System.out.println("La informacion de la moto es "+ moto3);
+		
+		Moto motoNueva = new Moto("honda", "CBR", 2005);
+		System.out.println("La informacion de la moto es " + motoNueva.toString());
+		
+			
+		}
+		
+		private static Coche crearCoche() {
+		System.out.println("Introduce marca del coche: ");
+		String marca = teclado.nextLine();
+		System.out.println("Introduce modelo del coche ");
+		String modelo = teclado.nextLine();
+		System.out.println("Introduce año de fabricación ");
+		int anio = teclado.nextInt();
+		System.out.println("Introduce numero de puertas ");
+		int cantidadPuerta = teclado.nextInt();
+		
+		//Coche coche = new Coche(marca,modelo,anio,cantidadPuerta);
+		//return coche;
+		return new Coche(marca, modelo, anio, cantidadPuerta);
+		
+	}
+		
+		private static Moto crearMoto() {
+			System.out.println("Introduce marca de la moto: ");
+			String marca = teclado.nextLine();
+			System.out.println("Introduce modelo de la moto ");
+			String modelo = teclado.nextLine();
+			System.out.println("Introduce año de fabricación ");
+			int anio = teclado.nextInt();
+			
+			Moto moto = new Moto(marca,modelo,anio);
+			return moto;
+			
+		}
+		
+
+	
+}
